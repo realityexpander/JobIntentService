@@ -47,6 +47,7 @@ class ExampleJobIntentService : JobIntentService() {
         Log.d(TAG, "onDestroy")
     }
 
+    // This is called if the system kills the job before it is complete.
     override fun onStopCurrentWork(): Boolean { // if return `true`, the job will restart later with same intent.
         Log.d(TAG, "onStopCurrentWork, isJobCancelled=$isJobCancelled")
 
